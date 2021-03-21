@@ -1,5 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown.js');
+const fs = require('fs');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -99,7 +101,7 @@ const questions = [
 
         // Please enter your License information.
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'license',
             message: 'Please select any applicable licenses.',
             choices: ['MIT', 'Apache', 'Boost', 'Unlicense']
@@ -139,11 +141,15 @@ const questions = [
         },
         // WHEN I enter my email address
         // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-       
+
     ])
         .then(answers => {
+            console.log(answers)
             // user feedback
-
+           
+            const text = generateMarkdown(answers);
+            console.log(text);
+            writeToFile('./index.md', text)
         })
         .catch(error => {
             if (error.isTtyError) {
@@ -156,6 +162,8 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+
+fs.writeFileSync(fileName, data);
 
 }
 
