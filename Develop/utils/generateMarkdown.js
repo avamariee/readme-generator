@@ -83,7 +83,7 @@ ${data.test}
 
 ## Contact Information
 ${data.email}
-https://www.github.com/ ${data.gitHub}
+https://www.github.com/${data.gitHub}
 
 
 
