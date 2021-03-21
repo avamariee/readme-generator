@@ -149,7 +149,7 @@ const questions = [
            
             const text = generateMarkdown(answers);
             console.log(text);
-            writeToFile('./index.md', text)
+            writeToFile('./README.md', text)
         })
         .catch(error => {
             if (error.isTtyError) {

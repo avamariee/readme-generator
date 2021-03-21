@@ -62,8 +62,29 @@ ${renderLicenseLink(license)}`
 
 function generateMarkdown(data) {
   return `# ${data.title}
-## ${data.description}
+
+## Description 
+${data.description}
+
+## License 
 ${renderLicenseSection(data.license)}
+
+## Installation
+${data.installation}
+
+## Usage
+${data.usage}
+
+## Contribution
+${data.contribution}
+
+## Testing Instructions
+${data.test}
+
+## Contact Information
+${data.email}
+https://www.github.com/ ${data.gitHub}
+
 
 
 
