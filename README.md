@@ -21,7 +21,7 @@ none
 
 ## Contact Information
 ava.m.bullock@gmail.com
-https://www.github.com/ avamariee
+https://www.github.com/avamariee
 
 
 
